@@ -8,10 +8,8 @@ class EmpModel extends CI_Model{
 		$data = array(				
 				'name' 			=> $this->input->post('name'), 
 				'age' 			=> $this->input->post('age'), 
-				'Java' 			=> $this->input->post('Java'), 
-				'Python'		=> $this->input->post('Python'), 
-				'PHP'			=> $this->input->post('PHP'), 
 				'designation' 	=> $this->input->post('designation'), 
+				'skills' 		=> $this->input->post('skills'), 
 				'address' 		=> $this->input->post('address'), 
 			);
 		$result=$this->db->insert('emp',$data);
@@ -22,16 +20,12 @@ class EmpModel extends CI_Model{
 		$name=$this->input->post('name');
 		$age=$this->input->post('age');
 		$designation=$this->input->post('designation');
-		$Java=$this->input->post('Java');
-		$Python=$this->input->post('Python');
-		$PHP=$this->input->post('PHP');
+		$skills=$this->input->post('skills');
 		$address=$this->input->post('address');
 		$this->db->set('name', $name);
 		$this->db->set('age', $age);
 		$this->db->set('designation', $designation);
-		$this->db->set('Java', $Java);
-		$this->db->set('python', $Python);
-		$this->db->set('PHP', $PHP);
+		$this->db->set('skills', $skills);
 		$this->db->set('address', $address);
 		$this->db->where('id', $id);
 		$result=$this->db->update('emp');
