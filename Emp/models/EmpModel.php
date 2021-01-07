@@ -17,6 +17,7 @@ class EmpModel extends CI_Model{
 		$result=$this->db->insert('emp',$data);
 		return $result;
 	}
+
 	function updateEmp(){
 		$id=$this->input->post('id');
 		$name=$this->input->post('name');
