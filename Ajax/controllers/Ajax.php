@@ -22,7 +22,7 @@ class Ajax extends CI_Controller {
               $config['upload_path'] = './uploads/';  
               $config['allowed_types'] = 'jpg|jpeg|png|gif';  
               $this->load->library('upload', $config);  
-              if(!$this->upload->do_upload('image_file'))  
+              /*if(!$this->upload->do_upload('image_file'))  
               {  
                   $error =  $this->upload->display_errors(); 
                   echo json_encode(array('msg' => $error, 'success' => false));
@@ -38,7 +38,7 @@ class Ajax extends CI_Controller {
  
                    if($getId){
                     $arr = array('msg' => 'Image has been uploaded successfully', 'success' => true);
-                   }
+                   }*/
                    echo json_encode($arr);
               }  
          }  

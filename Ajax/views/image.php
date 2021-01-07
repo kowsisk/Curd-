@@ -61,7 +61,7 @@
            else 
            {  
                 $.ajax({  
-                     url:"<?php echo base_url(); ?>ajax/ajaxImageStore",   
+                     url:"<?php echo base_url(); ?>index.php/ajax/ajaxImageStore",   
                      method:"POST",  
                      data:new FormData(this),  
                      contentType: false,  
